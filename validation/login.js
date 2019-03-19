@@ -11,10 +11,6 @@ module.exports = function validateLoginInput(data) {
         errors.email = "Email Is Invalid";
     }
 
-    if(!Validator.isLength(data.password, {min:6,max:30})){
-        errors.password = "Password Must Be At Least 6 Characters";
-    }
-
     if(Validator.isEmpty(data.email)){
         errors.email = "Email Field Is Required";
     }

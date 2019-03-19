@@ -1,4 +1,6 @@
-module.exports = {
-    mongoURI: 'mongodb+srv://vocchiogrosso:Spring%402019@development-ujmq1.mongodb.net/RPI?retryWrites=true',
-    secretOrKey:'secret'
-};
+if (process.env.NODE_ENV === 'production') {
+    module.exports = require('./keys_prod');
+  } else {
+    module.exports = require('./keys_dev');
+  }
+  
